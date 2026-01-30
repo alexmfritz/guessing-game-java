@@ -23,4 +23,26 @@ public class GuessingGame {
         System.out.println("3. B) If correct, continue to next guess.");
         System.out.println("Note: If any anytime you'd like to end your session, enter q for QUIT anywhere in the game and the game system will provide you a final score and exit the program.");
     }
+
+    public static int getDifficulty(Scanner console) {
+        int diff = console.nextInt();
+
+        switch (diff) {
+            case 1:
+                return MIN_DIFF_MAX;
+                break;
+            case 2:
+                return MED_DIFF_MAX;
+                break;
+            case 3:
+                return HARD_DIFF_MAX;
+                break;
+            case 4:
+                return EXTREME_DIFF_MAX;
+                break;
+            default:
+                return MIN_DIFF_MAX;
+                break;
+        }
+    }
 }
