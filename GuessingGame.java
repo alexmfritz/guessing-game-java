@@ -56,4 +56,9 @@ public class GuessingGame {
         Random random = new Random();
         return random.nextInt(max) + 1;
     }
+
+    public static int getGuess(Scanner console, int maxRange) {
+        System.out.println("Enter your guess (1 - " + maxRange + "): ");
+        return console.nextInt();
+    }
 }
