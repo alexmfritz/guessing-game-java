@@ -7,6 +7,20 @@ public class GuessingGame {
     public static final int EXTREME_DIFF_MAX = 1000;
 
     public static void main(String[] args) {
-        // code goes here
+        Scanner console = new Scanner(System.in);
+
+        printGameIntro();
+    }
+
+    public static void printGameIntro() {
+        System.out.println("JAVA GUESSING GAME");
+        System.out.println("Welcome, contestant!");
+        System.out.println("You are about to participate in a Guessing Game designed with the Java programming language.");
+        System.out.println("The rules are simple:");
+        System.out.println("1. Choose a difficulty.");
+        System.out.println("2. Enter your guess when prompted.");
+        System.out.println("3. A) If incorrect, carefully analyze feedback provided by the game system to guess again.");
+        System.out.println("3. B) If correct, continue to next guess.");
+        System.out.println("Note: If any anytime you'd like to end your session, enter q for QUIT anywhere in the game and the game system will provide you a final score and exit the program.");
     }
 }
