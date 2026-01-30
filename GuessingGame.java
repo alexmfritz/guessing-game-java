@@ -61,4 +61,26 @@ public class GuessingGame {
         System.out.println("Enter your guess (1 - " + maxRange + "): ");
         return console.nextInt();
     }
+
+    public static void giveFeedback(int guess, int target, int maxRange) {
+        int distance = Math.abs(guess - target);
+        double percentOff = ((double) distance / maxRange) * 100;
+        String msg;
+
+        if (percentOff <= 5) {
+            msg = "SCORCHING! You can almost feel it.";
+        } else if (percentOff >= 6 && percentOff <= 15) {
+            msg = "SIZZLING! You're getting closer.";
+        } else if (percentOff >= 16 && percentOff <= 30) {
+            msg = "LUKE WARM! You should keep going.";
+        } else if (percentOff >= 31 && percentOff <= 50) {
+            msg = "CHILLY! You're starting thawing out.";
+        } else if (percentOff >= 51 && percentOff <= 75) {
+            msg = "ICE COLD! You should actually try to guess.";
+        } else {
+            msg = "FROZEN SOLID! You couldn't be further from the finish line.";
+        }
+
+        System.out.println(msg + "Try again!");
+    }
 }
