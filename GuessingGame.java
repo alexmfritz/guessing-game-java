@@ -25,8 +25,14 @@ public class GuessingGame {
     }
 
     public static int getDifficulty(Scanner console) {
-        int diff = console.nextInt();
+        System.out.println("SELECT DIFFICULTY:");
+        System.out.println("\t1. Easy (1-50)");
+        System.out.println("\t2. Medium (1-100)");
+        System.out.println("\t3. Hard (1-500)");
+        System.out.println("\t4. Extreme (1-1000)");
+        System.out.print("Your choice: ");
 
+        int diff = console.nextInt();
         switch (diff) {
             case 1:
                 return MIN_DIFF_MAX;
