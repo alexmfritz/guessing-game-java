@@ -45,4 +45,9 @@ public class GuessingGame {
                 break;
         }
     }
+
+    public static int generateRandomNumber(int max) {
+        Random random = new Random();
+        return random.nextInt(max) + 1;
+    }
 }
